@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 8050219b5246c5be524d443f277a4f5d7e2a4d7e1ab7e256aba153f0497353f6
+-- hash: 9cbdcda9511966ddb846b05a8525de9c98e11f4d4cbf29209e89642e1530961b
 
 name:           Core
 version:        0.1.0.0
@@ -27,7 +27,7 @@ source-repository head
 library
   exposed-modules:
       Language
-      Utils
+      Parser
   other-modules:
       Paths_Core
   hs-source-dirs:

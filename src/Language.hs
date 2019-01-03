@@ -1,5 +1,7 @@
 module Language where
 
+import Parser
+
 data Expr a
   = EVar Name             -- Variables
   | ENum Int              -- Numbers
@@ -170,3 +172,8 @@ preludeDefs =
   , ("compose", ["f", "g", "x"], EAp (EVar "f") (EAp (EVar "g") (EVar "x")))
   , ("twice", ["f"], EAp (EAp (EVar "compose") (EVar "f")) (EVar "f"))
   ]
+
+--syntax :: [Token] -> CoreProgram
+
+--parse :: String -> CoreProgram
+--parse = syntax . clex
