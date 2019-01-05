@@ -24,6 +24,8 @@ data Iseq
   | INewline
   deriving (Eq, Show)
 
+data PartialExpr = NoOp | FoundOp Name CoreExpr
+
 type Name = String
 
 type IsRec = Bool
