@@ -179,3 +179,7 @@ preludeDefs =
 
 --parse :: String -> CoreProgram
 --parse = syntax . clex
+
+assembleOp :: CoreExpr -> PartialExpr -> CoreExpr
+assembleOp e1 NoOp = e1
+assembleOp e1 (FoundOp op e2) = EAp (EAp (EVar op) e1) e2
