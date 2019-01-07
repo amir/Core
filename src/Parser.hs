@@ -41,3 +41,6 @@ pThen combine p1 p2 toks = [ (combine v1 v2, toks2) | (v1, toks1) <- p1 toks,
 
 pEmpty :: a -> Parser a
 pEmpty p toks = [(p, toks)]
+
+pApply :: Parser a -> (a -> b) -> Parser b
+pApply p f toks = [(f b, tokens) | (b, tokens) <- p toks]
